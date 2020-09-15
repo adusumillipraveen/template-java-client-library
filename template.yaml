@@ -30,7 +30,6 @@ spec:
       base_package:
         title: Base package for client
         type: string
-        default: true
         description: base package for generated classes
       group_id:
         title: groupId in generated pom.xml
