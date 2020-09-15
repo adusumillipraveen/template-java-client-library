@@ -1,0 +1,42 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: java-client-library
+  title: Java client library template
+  description: Java client library, allows creating client given a swagger link.
+  tags:
+    - recommended
+    - swagger
+    - java-client
+spec:
+  owner: Platform Engineering (#rpe)
+  templater: javaclientlibrary
+  type: library
+  schema:
+    required:
+      - swagger_path
+      - base_package
+      - group_id
+      - artifact_id
+    properties:
+      description:
+        title: Description
+        type: string
+        description: Description of the library.
+      swagger_path:
+        title: Path to Swagger
+        type: string
+        description: Path to Swagger
+      base_package:
+        title: Base package for client
+        type: string
+        default: true
+        description: base package for generated classes
+      group_id:
+        title: groupId in generated pom.xml
+        type: string
+        description: groupId in generated pom.xml
+      artifact_id:
+        title: artifactId in generated pom.xml 
+        type: string
+        description: artifactId in generated pom.xml. This also becomes part of the generated library's filename
