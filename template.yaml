@@ -10,15 +10,19 @@ metadata:
     - java-client
 spec:
   owner: Platform Engineering (#rpe)
-  templater: javaclientlibrary
+  templater: cookiecutter
   type: library
   schema:
     required:
+      - component_id
       - swagger_path
       - base_package
-      - group_id
       - artifact_id
     properties:
+      component_id:
+        title: Component name
+        type: string
+        description: Name of the component, e.g. idam-client-library. This will be used as artifact id.
       description:
         title: Description
         type: string
@@ -30,12 +34,8 @@ spec:
       base_package:
         title: Base package for client
         type: string
-        description: base package for generated classes
+        description: base package for generated classes, example `uk.gov.hmcts.reform.idam.client`
       group_id:
-        title: groupId in generated pom.xml
+        title: groupId of the artifact
         type: string
-        description: groupId in generated pom.xml
-      artifact_id:
-        title: artifactId in generated pom.xml 
-        type: string
-        description: artifactId in generated pom.xml. This also becomes part of the generated library's filename
+        description: groupId of artifact, default is `uk.gov.hmcts.reform`

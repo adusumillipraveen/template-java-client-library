@@ -1,0 +1,12 @@
+{
+  "component_id": "",
+  "swagger_path": "",
+  "base_package": "",
+  "description": "Library description for {{ cookiecutter.component_id }}",
+  "group_id": "uk.gov.hmcts.reform",
+  "api_package": "{{ cookiecutter.base_package }}.api",
+  "model_package": "{{ cookiecutter.base_package }}.model",
+  "invoker_package": "{{ cookiecutter.base_package }}.invoker",
+  "artifact_version": "0.0.1-SNAPSHOT",
+  "owner": ""
+}
