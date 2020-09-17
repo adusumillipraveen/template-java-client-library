@@ -17,7 +17,6 @@ spec:
       - component_id
       - swagger_path
       - base_package
-      - artifact_id
     properties:
       component_id:
         title: Component name
@@ -35,7 +34,3 @@ spec:
         title: Base package for client
         type: string
         description: base package for generated classes, example `uk.gov.hmcts.reform.idam.client`
-      group_id:
-        title: groupId of the artifact
-        type: string
-        description: groupId of artifact, default is `uk.gov.hmcts.reform`
