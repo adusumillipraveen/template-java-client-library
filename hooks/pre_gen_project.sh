@@ -11,6 +11,6 @@ java -jar openapi-generator-cli.jar generate \
 --artifact-id {{cookiecutter.component_id}} \
 --artifact-version {{cookiecutter.artifact_version}} \
 -g spring -p java8=true --library spring-cloud \
--o /
+-o .
 
 rm -rf openapi-generator-cli.jar pom.xml
